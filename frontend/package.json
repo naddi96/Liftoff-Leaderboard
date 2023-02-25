@@ -1,6 +1,6 @@
 {
   "name": "liftoff",
-  "homepage": "http://naddi96.github.io/Liftoff-Leaderboard",
+  "homepage": "http://liftoff.mywire.org/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +13,7 @@
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
     "react-dropdown-select": "^4.9.3",
+    "react-plotly.js": "^2.6.0",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "save-dev": "^0.0.1-security",
@@ -20,8 +21,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
