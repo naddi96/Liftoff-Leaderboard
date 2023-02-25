@@ -1,0 +1,169 @@
+{
+
+    "MAPS":
+    {
+        "STRAW BALE":[
+            {"name":"01 - FIELD DAY", "id":"fdca6e12-4dff-438d-91d8-bbabe74ae426"},
+            {"name":"02 - AFTER HOURS", "id":"141c25b1-0da7-4ac7-8789-35fb156cad4f"},
+            {"name":"03 - LOOP THE SILO", "id":"dc57f262-f954-4a12-ae83-09686a5d86ba"},
+            {"name":"04 - AGAINS", "id":"db3241b5-99c2-4859-9bde-c2b6647059e4"},
+            {"name":"05 - BARN BURNER", "id":"562c66ec-b038-494c-a542-e2c2023fe4f3"},
+            {"name":"06 - FURTHER AFIELD", "id":"1e9c7428-2706-4d9f-9883-1f57332565ed"}
+        ],
+
+
+        "PINE VALLEY":[
+            {"name":"01 - FOREST FOR THE TREES", "id":"58e6df20-7715-47ca-814d-05c57406a454"},
+            {"name":"02 - THE GREAT OUTDOORS", "id":"ca6762f4-36ff-4db7-8305-54696a66f970"},
+            {"name":"03 - ROCK AND ROLL", "id":"735f47bd-25f9-4965-a2f3-eeef86cdad03"},
+            {"name":"04 - WILDCAMPING", "id":"5caee6b3-3436-4da0-b966-d677e838825d"},
+            {"name":"05 - TIMBER", "id":"ddef209b-b462-4571-9db0-d1f4da6f8d9c"}
+        ],
+        
+        "MINUS TWO":[
+            {"name":"01 - TURN SIGNALS", "id":"ddfd7bae-df2c-4d5b-bec5-dd917a261a39"},
+            {"name":"02 - SARO'S REVENGE", "id":"aa1292b3-e18c-409d-a96d-51e93d7a71b9"},
+            {"name":"03 - THE UNDERGROUND SCENE", "id":"ef826b93-7ee8-4890-a740-a8443bc4e92e"},
+            {"name":"04 - CONCRETE JUNGLE", "id":"4ecef08b-d27a-4b93-8216-2a7174f097aa"},
+            {"name":"05 - DRIFT STYLE", "id":"18774914-a399-4158-a019-a7d4189740fb"}
+        ],
+
+
+        "AUTUMN FIELDS":[
+            {"name":"01 - WALK IN THE PARK", "id":"e721d07f-26e9-4cef-a785-8e517c3bd22d"},
+            {"name":"02 - SWEATER WEATHER", "id":"c2fee4fb-bb65-4f01-b171-5ce9d2b0ab4e"},
+            {"name":"03 - STICK TIME", "id":"03e4a75c-4b28-4ca2-a557-5fb5fd82b95c"},
+            {"name":"04 - MUDLARKING", "id":"eb6245b1-963b-4529-8949-973d76f0880d"},
+            {"name":"05 - A LEAGUE OF ITS OWN", "id":"9a267890-81f1-4466-aa53-4dea9d5b99c2"},
+            {"name":"06 - AUTUMN AIRSPACE", "id":"76ff25b4-9839-40e7-b0de-42834be693a0"}
+        ],
+
+
+        "HANGAR C03":[
+            {"name":"01 - SHIPMENTS", "id":"617761c7-d2e2-447e-91d8-33916be641e8"},
+            {"name":"02 - PARCEL TRACKING", "id":"de940da2-b8e0-48ab-8bcd-fc08236123df"},
+            {"name":"THE WAY AROUND", "id":"941b7f69-9b55-4595-9a93-e84a01ec8b9b"},
+            {"name":"04 - MUDLARKING", "id":"03e4a75c-4b28-4ca2-a557-5fb5fd82b95c"}
+
+        ],
+
+
+        "LIFTOFF ARENA":[
+            {"name":"01 - MEXICAN WAVE", "id":"1ca0f876-9088-4965-a1df-0fb836f1dac8"},
+            {"name":"02 - SWING FOR THE BLEACHERS", "id":"634f2777-fe48-4334-821a-720fdb8d2aa8"},
+            {"name":"03 - GRANDSTAND", "id":"ea7c70d7-210c-404c-a500-669e67ba5594"},
+            {"name":"04 - INFINITY LOOP", "id":"80ce3ace-401d-44c9-987a-97f0148962c2"},
+            {"name":"05 - IN THE SPOTLIGHT", "id":"ed03d6dd-5eaa-4d5b-abf1-f13fa94e8f8b"},
+            {"name":"06 - TOUCHDOWN", "id":"5677f5c7-f8e9-44fb-8417-9b03817c4237"},
+            {"name":"07 - ROUND AND AROUND", "id":"d4e4e68c-7bba-4ecf-a36f-7cb0d612934a"}
+        ],
+
+        "DUBAI LEGENDS":[
+            {"name":"01 - LEGENDARY NIGHT", "id":"688b4047-dff2-488a-8ab1-5fc99d54b039"},
+            {"name":"02 - B-SHOW [2 LAPS](BY KRAZYZOCK)", "id":"cd51486c-f578-4a59-8984-9794e90eb738"}
+        ],
+
+        
+        "HANNOVER":[
+            {"name":"01 - THE BIGGEST YET", "id":"906d8625-e608-487f-be91-1ed1b055d3f9"},
+            {"name":"02 - BRING ME A SHRUBBERY", "id":"b495f14d-f247-4f81-b8b7-a6234b56fd98"},
+            {"name":"03 - CONE OFF", "id":"f2cb9218-341c-4d0c-b6a6-6ac27193190a"},
+            {"name":"04 - AROUND THE BLOCK", "id":"95ce1f95-bc29-49cd-a25e-f4e962588c24"},
+            {"name":"05 - GO INTEL", "id":"871a5e89-78a3-4891-ad5c-996487312ab9"},
+            {"name":"[BOMBA] ATOMICA", "id":"22cacdc7-1993-43fa-9fcf-b4f8004aad8b"},
+            {"name":"[BOMBA] OOPS!", "id":"3b325ffc-f0b1-484e-965b-f96437c4c594"},
+            {"name":"[NADIBFPV] SHIKY TRICKY", "id":"d5dddcd6-a31d-4dae-bc75-c4e0d3d3c87b"}
+        ],
+
+        "PARIS DRONE FESTIVAL":[
+            {"name":"01 - CITY TRIP", "id":"856973ea-0c52-4780-967f-ec9d26e3f894"},
+            {"name":"02 - TRIUMPH", "id":"cc4ffb1d-ceef-4653-9c1f-9cd2b32abd98"},
+            {"name":"03 - CITY OF LIGHTS", "id":"e85712d2-2dda-4d52-927a-1c5e38c6282d"},
+            {"name":"04 - PROMENADING", "id":"7e063d78-b8ec-40fa-963e-a6cc449219ef"},
+            {"name":"05 - STAGE FRIGHT", "id":"a3435594-553f-42e8-a089-75205a335aa2"}
+        ],
+
+        "THE PIT":[
+            {"name":"01 - WAY DOWN IN THE HOLE", "id":"d32d4fb7-aace-4484-bde2-ca450c52afc5"},
+            {"name":"02 - INTO THE ABYSS", "id":"f2218770-1e32-42cd-8f7a-eb5504eac53e"},
+            {"name":"03 - JACKPOT", "id":"3ca74057-632d-49fb-9c14-eafae5060f55"},
+            {"name":"04 - THE RED BARON", "id":"7a1eed1c-e31e-45c1-8e8a-328e374382a9"},
+            {"name":"05 - RESERVOIR", "id":"7a1eed1c-e31e-45c1-8e8a-328e374382a9"},
+            {"name":"06 - CONVEYOR BELT DIVE", "id":"a386001f-65fb-45c1-ba54-f6687092bf68"}
+        ],
+        
+        "THE GREEN":[
+            {"name":"01 - PART FOR THE COURSE", "id":"c77205f9-1f0e-4ddf-922d-6864e16ce258"},
+            {"name":"02 - ROLLING HILLS", "id":"b1f03694-e516-4a8b-a0c0-df471cf4384c"},
+            {"name":"03 - CLUB HOUSE", "id":"b1d49814-1b7e-4eb0-8f38-f03d50f9c17b"},
+            {"name":"04 - FLOP SHOT", "id":"c470450a-a136-4bb5-abd1-a375874d98a5"},
+            {"name":"05 - TEE OFF", "id":"058bc513-24fd-45c8-9de0-2cb412a0f81d"},
+            {"name":"06 - THE NINETEENTH HOLE", "id":"d7fa646e-c13b-4ffd-a3af-a79db3413ab6"}
+        ],
+
+        "HALL 26":[
+            {"name":"01 - RACE AROUND THE RAFTER", "id":"8c9cad42-0c63-414a-a113-a36f433713a0"},
+            {"name":"02 - HULA HOOP", "id":"7dce27e2-9b84-4d43-8e71-fb621a7f223f"},
+            {"name":"03 - HALL OF FAME", "id":"34106ff7-d3c7-46dc-9a1f-b608b07fd60b"},
+            {"name":"04 - A ROOF OVER YOUR HEAD", "id":"129a7fb3-5996-4457-a6bf-b575bafedda4"},
+            {"name":"05 - SUPPORT STRUCTURE", "id":"52f4c1b2-0225-40d9-b49a-e18da3f613af"}
+        ],
+
+        "BARDWELL'S YARD":[
+            {"name":"01 - FRONT PORCH FRENZY", "id":"e4e1a63b-3357-4fc2-b617-41b5d83f6222"},
+            {"name":"02 - LEARN SOMETHING TODAY", "id":"c4112e56-8f74-4b7b-b834-7263e663a1d3"},
+            {"name":"03 - STUFF THAT WORKS", "id":"6030ba91-1e3d-4c53-97ee-3c628979571e"},
+            {"name":"04 - KNOW IT ALL", "id":"4b196e79-6914-4b52-8b57-763768c925dd"},
+            {"name":"05 - HUMBLE BEGINNINGS", "id":"dc96997f-d4f8-4d18-9ef9-b92bd479deaf"},
+            {"name":"06 - BIRDHOUSE", "id":"5168443a-ddbe-4f9c-b4ed-d87f3d3250fc"}
+        ],
+
+        
+        "BANDO CITY":[
+            {"name":"01 - SPARE TIRES", "id":"e93a5289-da3e-4e57-8726-417f70f1a748"},
+            {"name":"02 - WHO NEEDS STAIRS", "id":"4076fd35-9cc8-4b5a-be8d-25114b44ba75"},
+            {"name":"03 - PIPE DREAM", "id":"103835aa-81c0-4a6e-9803-a81e055cffee"},
+            {"name":"04 - CHOICE MATTERS", "id":"bd250698-a3ae-4d46-aa31-0ae1aa9f7067"},
+            {"name":"05 - UNDER CONSTRUCTION", "id":"608f84fb-45a7-48b8-bc4a-4844df61d75d"},
+            {"name":"(MEKON) BANDO DUAL DIRECTION", "id":"da1d23d5-1324-4245-9dad-146edf3c8438"},
+            {"name":"[NADIBFPV] AIR BUBBLE", "id":"d4edbe5a-47dc-4552-9757-a81ddc3250f0"},
+            {"name":"[NADIBFPV] TRIPPY BANDO", "id":"080d59b1-456f-422d-8719-d1202dfbcf9e"}
+
+        ],
+        "THE WOODPECKER":[
+            {"name":"01 - OVER THE HORIZON", "id":"e8eff2ed1-3bbf-45d4-b8b8-1cba07e0b79d"},
+            {"name":"02 - STEEL YARD", "id":"20565e17-6a9e-4588-a810-a24f6f969ee3"}
+            
+        ],
+
+        "SCHORT CIRCUIT":[
+            {"name":"01 - POLE POSITION", "id":"b4e1e0ef-d0a3-49b4-b630-5d8929eaf7ab"},
+            {"name":"02 - DISKART", "id":"a1f9b644-33a0-489e-b7c6-b38ca08abae4"},
+            {"name":"03 - OVERPASS", "id":"e13ed8fd-f109-4a65-93ac-7d17f66e10e8"},
+            {"name":"[NADIBFPV] EZ FLOW", "id":"be51964b-1fea-4f52-977a-6ea8595d0116"}
+        ],
+
+        "SURTUR":[
+            {"name":"01 - HIKING TRAIL", "id":"a2e18e84-3b99-49b9-8f8d-5776196f9a2a"},
+            {"name":"02 - MOUNTAINEERING", "id":"db3386c8-d1cc-4588-8faf-31d0b648a40e"},
+            {"name":"03 - SURTALOGI TOUR", "id":"64329127-caf0-44a7-8fb4-202c2ef41f16"},
+            {"name":"04 - THE FLOOR IS LABA", "id":"7bd370f5-fb7d-4a6b-99b8-df858f252f0f"}
+
+        ]
+
+    },
+    
+
+    "config":{
+        "BestRaceTimes":"\"GamemodeFlags\":1,\"ModifierFlags\":0\"",
+        "BestLapTimes":"\"GamemodeFlags\":2,\"ModifierFlags\":0\"",
+        "purist_BestRaceTimes":"\"GamemodeFlags\":1,\"ModifierFlags\":2\"",
+        "purist_BestLapTimes":"\"GamemodeFlags\":2,\"ModifierFlags\":2\"",
+        "Timestamp":null
+
+    }
+
+
+
+
+}
