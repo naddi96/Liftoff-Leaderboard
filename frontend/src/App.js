@@ -5,6 +5,7 @@ import Grid from './components/Grid';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import maps from './maps.json';
 import React from 'react';
+import pac from '../package.json';
 
 class App extends React.Component {
   
@@ -20,6 +21,10 @@ class App extends React.Component {
 
   render(){
 
+
+    if (window.location.protocol==="https:"){
+      window.location.replace(pac.homepage)
+    }
   return (
     <div style={{backgroundColor:"#adb5bd"}} className="App">
       
