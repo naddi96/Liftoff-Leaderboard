@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Plot from 'react-plotly.js';
-
+import config from '../proxy_config.json'
 class LoadData extends React.Component{
 
 
@@ -24,7 +24,7 @@ class LoadData extends React.Component{
         this.state={
             txt:"asdasdasdsasdasad",
             
-            url:"http://172.20.89.246:8080/https://liftoff-service.azurewebsites.net/unity/v0.5/GetCommunityLeaderboard.php",
+            url:"http://"+config.proxy+"/https://liftoff-service.azurewebsites.net/unity/v0.5/GetCommunityLeaderboard.php",
             body:"{\"LeaderboardKeyword\":{\"ContentId\":\""+
             this.props.ContentId+"\",\"GamemodeFlags\":\""+
             this.props.GamemodeFlags+"\",\"ModifierFlags\":\""+
