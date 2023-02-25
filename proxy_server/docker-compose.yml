@@ -2,6 +2,7 @@
 version: '3'
 services:
   cors-anywhere:
+    restart: "unless-stopped"
     build: .
     ports:
       - "8080:8080"
