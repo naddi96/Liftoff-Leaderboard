@@ -36,7 +36,7 @@ class App extends React.Component {
       <div style={{ marginBottom:"10px" ,marginTop:"10px",  margin:"0 auto" ,width:"50%" ,textAlign: "left"}}>
     
   <div className="form-group">
-    <label style={{fontSize:"20px"}} htmlFor="formGroupExampleInput">Paste your pubblic steam url for comparing the results</label>
+    <label style={{fontSize:"20px"}} htmlFor="formGroupExampleInput">Paste your public steam url for comparing the results</label>
     <input value={this.state.input} type="text" 
         className="form-control" 
         id="formGroupExampleInput" 

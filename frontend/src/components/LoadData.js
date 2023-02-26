@@ -77,9 +77,15 @@ class LoadData extends React.Component{
 
         var text=(<></>)
         if ( this.state.data){
+
+
             var xValues=[]
             var yValues=[]
             var json=this.state.data
+
+            if (json.AllEntries.length===0){
+                return (<p>There is no data to display</p>)
+            }
             for(var i=0 ; i<json.AllEntries.length;i++){
                 xValues.push(json.AllEntries[i][2])
                 yValues.push(json.AllEntries[i][1]/1000)
@@ -107,7 +113,21 @@ class LoadData extends React.Component{
                 var total=yValues.length
                 var percentile= 100-parseInt(((total-position)/total)*100)
                 var seconds_from1=yValues[myindex]-yValues[0]
-                text=(<div><p>You are in the top <b>{percentile}th percentile </b>
+
+                var write=<>{percentile}th</>
+                if (percentile===1){
+                    write=<>{percentile}st</>
+                }
+                
+                if (percentile===2){
+                    write=<>{percentile}nd</>
+                }
+                if (percentile===3){
+                    write=<>{percentile}rd</>
+                }
+
+
+                text=(<div><p>You are in the top <b>{write} percentile </b>
                  and you are in position <b>{position} over {total}</b> participants with score of <b>{yValues[myindex]} Seconds</b>.</p>
                 <p>You are <b>{seconds_from1} seconds</b> slower then the first pilot</p></div>)
 
