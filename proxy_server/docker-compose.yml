@@ -1,8 +1,27 @@
 
 version: '3'
 services:
-  cors-anywhere:
+  cors:
     restart: "unless-stopped"
-    build: .
+    build:
+      context: .
+      dockerfile: cors-proxy.Dockerfile
+    networks: 
+      - mynetwork
+
+  reverseproxy:    
+    restart: "unless-stopped"
+    build:
+      context: .
+      dockerfile: nginx.Dockerfile
     ports:
-      - "8080:8080"
+      - 443:443
+      - 80:80
+    links: 
+      - cors
+    networks: 
+      - mynetwork
+    
+networks:
+  mynetwork:
+    driver: bridge
