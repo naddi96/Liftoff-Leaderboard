@@ -76,7 +76,7 @@ class Grid extends React.Component{
         console.log('url( ".'+packageJson.base_path+'images/' + this.props.map_name + '.jpg")')
         return (
           
-          <div className='pippo' style={{ backgroundImage :'url("http://localhost:3000/Liftoff-Leaderboard/images/AUTUMN%20FIELDS.jpg")'}}>
+          <div className='pippo' style={{ backgroundImage :'url("'+packageJson.homepage+'images/'+this.props.map_name + '.jpg")'}}>
 
               
               
