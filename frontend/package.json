@@ -1,6 +1,8 @@
 {
   "name": "liftoff",
-  "homepage": "http://liftoff.mywire.org/",
+  "homepage": "https://naddi96.github.io/Liftoff-Leaderboard/",
+  "base_path":"/Liftoff-Leaderboard/",
+  "proxy":"https://l.liftoff.mywire.org/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

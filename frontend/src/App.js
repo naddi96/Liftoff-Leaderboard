@@ -5,12 +5,13 @@ import Grid from './components/Grid';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import maps from './maps.json';
 import React from 'react';
-import pac from '../package.json';
+import packageJson from '../package.json';
 
 class App extends React.Component {
   
-  constructor(){
-    super()
+  constructor(props){
+    
+    super(props)
     this.state={
       steam_id:"",
       input:""
@@ -22,9 +23,7 @@ class App extends React.Component {
   render(){
 
 
-    if (window.location.protocol==="https:"){
-      window.location.replace(pac.homepage)
-    }
+
   return (
     <div style={{backgroundColor:"#adb5bd"}} className="App">
       
@@ -36,10 +35,10 @@ class App extends React.Component {
       <Navigation/>        
       <div style={{ marginBottom:"10px" ,marginTop:"10px",  margin:"0 auto" ,width:"50%" ,textAlign: "left"}}>
     
-  <div class="form-group">
-    <label style={{fontSize:"20px"}} for="formGroupExampleInput">Paste your pubblic steam url for comparing the results</label>
+  <div className="form-group">
+    <label style={{fontSize:"20px"}} htmlFor="formGroupExampleInput">Paste your pubblic steam url for comparing the results</label>
     <input value={this.state.input} type="text" 
-        class="form-control" 
+        className="form-control" 
         id="formGroupExampleInput" 
         placeholder="example -> https://steamcommunity.com/profiles/7656119831165XXXX/"
         onChange={(event)=>{
@@ -77,14 +76,14 @@ class App extends React.Component {
         <Routes>
         {Object.keys(maps.MAPS).map((item,index) => (
           <Route key={index}
-            path= {item}
+            path= {packageJson.base_path+item}
             element={<Grid  steam_id={this.state.steam_id} map_name={item} tracks={maps.MAPS[item]}/>}
         />
 
 
         ))}
-        <Route path='/'
-              element={<Navigate to="/STRAW BALE" replace />}
+        <Route path={packageJson.base_path}
+              element={<Navigate to= {packageJson.base_path+"STRAW BALE"} replace />}
               />
         </Routes>
       </Router>

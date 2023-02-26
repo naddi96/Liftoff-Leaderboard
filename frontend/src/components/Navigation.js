@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import file from '../maps.json';
 import { NavLink } from "react-router-dom";
+import packageJson from '../../package.json';
 function Navigation(){
   return (
     <>
@@ -13,7 +14,7 @@ function Navigation(){
             {
               
               Object.keys(file.MAPS).map((item,index) => (
-                <NavLink key={index}  className={"nav"} to={"/"+item}>
+                <NavLink key={index}  className={"nav"} to={packageJson.base_path+item}>
                  {item}
                   </NavLink>
               ))

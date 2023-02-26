@@ -2,6 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import LoadData from './LoadData';
+import packageJson from '../../package.json';
 //function Grid(props) {
 
 const Modal = ({ handleClose, show, children }) => {
@@ -72,10 +73,10 @@ class Grid extends React.Component{
   
   render(){
 
-
+        console.log('url( ".'+packageJson.base_path+'images/' + this.props.map_name + '.jpg")')
         return (
           
-          <div className='pippo' style={{ backgroundImage :'url("./images/' + this.props.map_name + '.jpg")'}}>
+          <div className='pippo' style={{ backgroundImage :'url("http://localhost:3000/Liftoff-Leaderboard/images/AUTUMN%20FIELDS.jpg")'}}>
 
               
               
@@ -137,7 +138,7 @@ class Grid extends React.Component{
                           
                         <p>
 
-                            <select  onChange={(event)=> {
+                            <select  defaultValue={1} onChange={(event)=> {
                               console.log(event.target.value)
                               if (event.target.value==="2"){
                                 var k=this.state.date_array
@@ -147,7 +148,7 @@ class Grid extends React.Component{
                               }
                             }}>
 
-                              <option selected={true} value="1">All time</option>
+                              <option  value="1">All time</option>
                               <option value="2">Pick a date</option>
 
                             </select>
@@ -164,7 +165,7 @@ class Grid extends React.Component{
                         <p><Button className='BestLapTimes' variant='primary' size='sm' 
                         onClick={() => this.openPopupHandler({pressedButton:'Best Lap Times' ,date:this.state.date_array[index], GamemodeFlags:2, ModifierFlags:0, track:item})}>
                           view</Button></p>
-                        <p> <Button Button className='BestRaceTimesPurist' variant='primary' size='sm'
+                        <p> <Button className='BestRaceTimesPurist' variant='primary' size='sm'
                         onClick={() => this.openPopupHandler({pressedButton:'Best Race Times Purist', date:this.state.date_array[index], GamemodeFlags:1, ModifierFlags:2, track:item})}>
                           view</Button></p>
                         <p><Button className='BestLapTimesPurist' variant='primary' size='sm' 
