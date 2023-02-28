@@ -1,29 +1,25 @@
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import file from '../maps.json';
-import { NavLink } from "react-router-dom";
-import packageJson from '../../package.json';
-function Navigation(){
+function Navigation(props) {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Nav className="me-auto">
-           
+      <Navbar collapseOnSelect bg="navbar navbar-dark bg-dark" expand="xl">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav  className="me-auto">
             {
-              
-              Object.keys(file.MAPS).map((item,index) => (
-                <NavLink key={index}  className={"nav"} to={packageJson.base_path+item}>
-                 {item}
-                  </NavLink>
+              Object.keys(file.MAPS).map((item, index) => (
+                <Nav.Link style={{fontSize:"13px"}}  key={index} onClick={(value) => props.topMenuClicked(item)} >
+                  {item}
+                </Nav.Link >
               ))
 
-
-
-            }          
+            }
           </Nav>
-        </Container>
+        </Navbar.Collapse>
+
+
       </Navbar>
     </>
   );

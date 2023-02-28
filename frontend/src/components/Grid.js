@@ -72,15 +72,12 @@ class Grid extends React.Component{
 
   
   render(){
-
-        console.log('url( ".'+packageJson.base_path+'images/' + this.props.map_name + '.jpg")')
         return (
           
           <div className='pippo' style={{ backgroundImage :'url("'+packageJson.homepage+'images/'+this.props.map_name + '.jpg")'}}>
 
               
-              
-              {console.log(this.state.date_array)}
+
               {this.state.showPopup &&
               <Modal show={this.state.showPopup} handleClose={this.closePopupHandler}>
                 <LoadData   
@@ -139,7 +136,6 @@ class Grid extends React.Component{
                         <p>
 
                             <select  defaultValue={1} onChange={(event)=> {
-                              console.log(event.target.value)
                               if (event.target.value==="2"){
                                 var k=this.state.date_array
                                 k[index]=""

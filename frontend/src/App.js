@@ -2,10 +2,8 @@
 import './App.css';
 import Navigation from './components/Navigation';
 import Grid from './components/Grid';
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import maps from './maps.json';
 import React from 'react';
-import packageJson from '../package.json';
 
 class App extends React.Component {
   
@@ -14,8 +12,16 @@ class App extends React.Component {
     super(props)
     this.state={
       steam_id:"",
-      input:""
+      input:"",
+      top_menu_cliked:"STRAW BALE",
+    
     }
+
+    this.topMenuClicked = this.topMenuClicked.bind(this);
+  }
+
+  topMenuClicked(value){
+    this.setState({top_menu_cliked:value})
   }
 
 
@@ -29,10 +35,10 @@ class App extends React.Component {
       
       
       
-      <Router>
+
       
       
-      <Navigation/>        
+      <Navigation topMenuClicked={this.topMenuClicked}/>        
       <div style={{ marginBottom:"10px" ,marginTop:"10px",  margin:"0 auto" ,width:"50%" ,textAlign: "left"}}>
     
   <div className="form-group">
@@ -70,25 +76,8 @@ class App extends React.Component {
           
         }}/>
   </div>
-
-  <p></p>
       </div>
-        <Routes>
-        {Object.keys(maps.MAPS).map((item,index) => (
-          <Route key={index}
-            path= {packageJson.base_path+item}
-            element={<Grid  steam_id={this.state.steam_id} map_name={item} tracks={maps.MAPS[item]}/>}
-        />
-
-
-        ))}
-        <Route path={packageJson.base_path}
-              element={<Navigate to= {packageJson.base_path+"STRAW BALE"} replace />}
-              />
-        </Routes>
-      </Router>
-      
-
+        <Grid  steam_id={this.state.steam_id} map_name={this.state.top_menu_cliked} tracks={maps.MAPS[this.state.top_menu_cliked]}/>
     </div>
   );
 }

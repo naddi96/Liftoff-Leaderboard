@@ -33,7 +33,6 @@ class LoadData extends React.Component{
             this.props.FetchUserEntries+"\"]}",
             response:{}
         }
-        console.log(this.props.date)
         this.load_leaderboard = this.load_leaderboard.bind(this);
 
 
@@ -41,8 +40,6 @@ class LoadData extends React.Component{
     }
 
     async load_leaderboard(url,body){
-    console.log("dssdfsdf")
-    console.log(this.state)
     var myHeaders = new Headers();
     myHeaders.append("Accept", "*/*");
     myHeaders.append("RequestId", "0");
