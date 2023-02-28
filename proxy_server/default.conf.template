@@ -1,0 +1,22 @@
+	server{
+
+    listen 443 default_server ssl;
+    server_name ${DOMAIN_NAME};
+    ssl_certificate /etc/letsencrypt/live/${DOMAIN_NAME}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/${DOMAIN_NAME}/privkey.pem; 
+   # access_log            /var/log/nginx/webserver.access.log;
+
+    location / {
+
+      proxy_set_header        Host ${DOLLAR}host;
+      proxy_set_header        X-Real-IP ${DOLLAR}remote_addr;
+      proxy_set_header        X-Forwarded-For ${DOLLAR}proxy_add_x_forwarded_for;
+      proxy_set_header        X-Forwarded-Proto ${DOLLAR}scheme;
+
+   	  proxy_pass          ${PROXY_PASS_PROTOCOL}://${PROXY_PASS_HOST}:${PROXY_PASS_PORT};
+      proxy_read_timeout  90;
+
+      #proxy_redirect      http://localhost:8080 https://prova.com;
+    }
+
+}

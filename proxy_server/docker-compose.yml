@@ -6,10 +6,14 @@ services:
     build:
       context: .
       dockerfile: cors-proxy.Dockerfile
-    networks: 
-      - mynetwork
 
-  reverseproxy:    
+  reverseproxy:
+    environment:
+      - DOMAIN_NAME= l.liftoff.mywire.org
+      - EMAIL= d.naddi.96@gmail.com
+      - PROXY_PASS_HOST=cors 
+      - PROXY_PASS_PORT=8080
+      - PROXY_PASS_PROTOCOL=http
     restart: "unless-stopped"
     build:
       context: .
@@ -19,9 +23,3 @@ services:
       - 80:80
     links: 
       - cors
-    networks: 
-      - mynetwork
-    
-networks:
-  mynetwork:
-    driver: bridge
