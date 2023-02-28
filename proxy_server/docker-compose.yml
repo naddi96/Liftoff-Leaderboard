@@ -9,8 +9,8 @@ services:
 
   reverseproxy:
     environment:
-      - DOMAIN_NAME= l.liftoff.mywire.org
-      - EMAIL= d.naddi.96@gmail.com
+      - DOMAIN_NAME=l.liftoff.mywire.org
+      - EMAIL=d.naddi.96@gmail.com
       - PROXY_PASS_HOST=cors 
       - PROXY_PASS_PORT=8080
       - PROXY_PASS_PROTOCOL=http
