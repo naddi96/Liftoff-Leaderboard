@@ -2,6 +2,11 @@
 import React from 'react'
 import Plot from 'react-plotly.js';
 import config from '../../package.json';
+
+
+
+
+
 class LoadData extends React.Component{
 
 
@@ -10,6 +15,9 @@ class LoadData extends React.Component{
         this.load_leaderboard(this.state.url,this.state.body);
         
     }
+
+
+
     constructor(props){
         super(props)
         var ModifierFlags=this.props.ModifierFlags
@@ -31,7 +39,8 @@ class LoadData extends React.Component{
             ModifierFlags+"\",\"Timestamp\":\""+
             date+"\"},\"PlatformName\":\"steam\",\"FetchAllEntries\":true,\"FetchUserEntries\":[\""+
             this.props.FetchUserEntries+"\"]}",
-            response:{}
+            response:{},
+            num_bins:50,
         }
         this.load_leaderboard = this.load_leaderboard.bind(this);
 
@@ -74,12 +83,13 @@ class LoadData extends React.Component{
 
         var text=(<></>)
         if ( this.state.data){
-
+        
+            
 
             var xValues=[]
             var yValues=[]
             var json=this.state.data
-
+            
             if (json.AllEntries.length===0){
                 return (<p>There is no data to display</p>)
             }
@@ -87,6 +97,8 @@ class LoadData extends React.Component{
                 xValues.push(json.AllEntries[i][2])
                 yValues.push(json.AllEntries[i][1]/1000)
             }
+
+    
 
             var avv= yValues.reduce((a, b) => a + b)/yValues.length
             var Average = {
@@ -101,6 +113,7 @@ class LoadData extends React.Component{
             
 
             var dat
+            var you_hist
             if (json.UserEntries.length !==0){
                 console.log(json.UserEntries)
                 var myindex=json.UserEntries[0][2]-1
@@ -127,6 +140,22 @@ class LoadData extends React.Component{
                 text=(<div><p>You are in the top <b>{write} percentile </b>
                  and you are in position <b>{position} over {total}</b> participants with score of <b>{yValues[myindex]} Seconds</b>.</p>
                 <p>You are <b>{seconds_from1} seconds</b> slower then the first pilot</p></div>)
+
+
+                you_hist={
+                    marker: {
+                        color:"red",
+                        size: 12 
+                
+                    },
+                    x: [yValues[myindex]],
+                    y: [0],
+                    mode:"markers",
+                    type:"scatter",
+                    name: 'You',
+                    width: 1
+                    
+                  }
 
                 dat = [{
                     x: xValues,
@@ -169,14 +198,53 @@ class LoadData extends React.Component{
                 title: this.props.pressedButton +" Leaderboard \""+this.props.name +"\" "+date
               
         };              
+        
+
+        var nbins=this.state.num_bins/10
+
+        var layout_hist={
+            xaxis: {title: "Seconds"},
+            yaxis: {title: "Number of Racers"}
+        }
+        var histogram=[{
+            x: yValues,
+            type: 'histogram',
+           // nbinsx :this.state.num_bins
+          xbins:{
+                size:nbins
+            },
+            
+            marker: {
+                color:"blue",
+                line:{
+                    width:1
+                }
+                
+            }
+            
+        },you_hist]
+        
+        
     }
 
         //style={{width:"100%"}}
         return ( <>
         
         { this.state.data &&
+        <div>
         <Plot style={{width:"100%"}} data={dat}
         layout={layout}/>
+        <div>
+        
+
+        <Plot style={{}} data={histogram} layout={layout_hist} />
+        <input style={{width:"50%"}} type="range" min={1} max={339*3} 
+        onChange={(event)=> this.setState({num_bins:event.target.value})} class="slider" id="myRange"></input>
+        <p>Bar size: {this.state.num_bins/10}</p>
+        </div>
+
+
+        </div>
         }
 
         { !this.state.data &&
@@ -185,6 +253,9 @@ class LoadData extends React.Component{
         <img src="https://media.tenor.com/u8sdX3dcszgAAAAC/homer-running.gif" alt="stupid homer"/>
         }
         {text}
+
+       
+
     </>)
     }
 }
