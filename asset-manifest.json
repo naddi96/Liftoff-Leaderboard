@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Liftoff-Leaderboard/static/css/main.9ce9e1ca.css",
-    "main.js": "/Liftoff-Leaderboard/static/js/main.819f8ca6.js",
+    "main.js": "/Liftoff-Leaderboard/static/js/main.b84dc437.js",
     "static/js/787.f98a55f1.chunk.js": "/Liftoff-Leaderboard/static/js/787.f98a55f1.chunk.js",
     "index.html": "/Liftoff-Leaderboard/index.html",
     "main.9ce9e1ca.css.map": "/Liftoff-Leaderboard/static/css/main.9ce9e1ca.css.map",
-    "main.819f8ca6.js.map": "/Liftoff-Leaderboard/static/js/main.819f8ca6.js.map",
+    "main.b84dc437.js.map": "/Liftoff-Leaderboard/static/js/main.b84dc437.js.map",
     "787.f98a55f1.chunk.js.map": "/Liftoff-Leaderboard/static/js/787.f98a55f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9ce9e1ca.css",
-    "static/js/main.819f8ca6.js"
+    "static/js/main.b84dc437.js"
   ]
 }
