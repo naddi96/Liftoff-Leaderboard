@@ -206,6 +206,8 @@ class LoadData extends React.Component{
             xaxis: {title: "Seconds"},
             yaxis: {title: "Number of Racers"}
         }
+
+
         var histogram=[{
             x: yValues,
             type: 'histogram',
@@ -219,12 +221,13 @@ class LoadData extends React.Component{
                 line:{
                     width:1
                 }
-                
             }
-            
-        },you_hist]
-        
-        
+        }]
+
+
+        if (you_hist){
+            histogram.push(you_hist)
+        }
     }
 
         //style={{width:"100%"}}
